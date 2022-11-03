@@ -4,20 +4,22 @@ import apiURL from '../api';
 
 export const Page = (props) => {
 
-  const [article, setArticle] = useState([]);
+  const [article, setArticle] = useState('');
   const [isAddingArticle, setAddingArticle] = useState(false)
-
-  async function fetchArticle(){
+  
+    
+    async function fetchArticle(){
 		const response = await fetch(`${apiURL}/wiki/${props.page.slug}`);
 		const articleData = await response.json();
     console.log("dtat", articleData)
 		setArticle(articleData);
+    
 		
 	}
 
-	useEffect(() => {
+	{/*useEffect(() => {
 		fetchArticle();
-	}, []);
+	}, []);*/}
 
 
   const handleSubmit = (e) => {
@@ -29,13 +31,15 @@ export const Page = (props) => {
   }
 
   return <>
+  <div>
     <br/>
     <h3 className='titlestyle' onClick = {fetchArticle}>
     {props.page.title}</h3>
-    <h4>Author: </h4>
+    <h4>Author: {article.author.name}</h4>
     <h5>Content: {props.page.content}</h5>
     <h6>Date: {props.page.createdAt}</h6>
     {/*<h7>Tags: {props.page.tags}</h7>*/}
+    </div>
 
    {/*} <button onClick={()=>{
       setArticle(null)
