@@ -7,6 +7,7 @@ export const PagesList = ({pages}) => {
 			pages.map((page, idx) => {
 				return <Page page={page} key={idx} />
 			})
+
 		}
 	</>
 } 
