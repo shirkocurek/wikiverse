@@ -29,7 +29,8 @@ export const Page = (props) => {
   }
 
   return <>
-    <h3 onClick = {fetchArticle}>
+    <br/>
+    <h3 className='titlestyle' onClick = {fetchArticle}>
     {props.page.title}</h3>
     <h4>Author: </h4>
     <h5>Content: {props.page.content}</h5>
