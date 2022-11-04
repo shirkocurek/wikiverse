@@ -60,13 +60,13 @@ export const App = () => {
 		<div>
 			<img scr= 'https://labs.openai.com/e/Bv6mKr9x0gw9HMe4MRkHXz47/original' alt= 'book in space'/>
 		</div>	
-      <h1>WikiVerse</h1>
+      <h1 className='header1'>WikiVerse</h1>
 	       {isAddingArticle ?
-		   <div>
+		   <div className='formdiv'>
 			<form onSubmit={handleSubmit}>
 				<h3>Add Article</h3>
 				<br/>
-				<input 
+				<input className='inputs'
 				type = 'text'
 				placeholder= 'Title'
 				aria-label='title'
@@ -74,7 +74,7 @@ export const App = () => {
 				value = {title}
 				/>
 				<br/>
-				<input 
+				<input className='inputs'
 				type = 'text'
 				placeholder= 'Article Content'
 				aria-label='Content'
@@ -82,7 +82,7 @@ export const App = () => {
 				value = {content}
 				/>
 				<br/>
-				<input 
+				<input className='inputs'
 				type = 'text'
 				placeholder= 'Article Name'
 				aria-label='name'
@@ -90,7 +90,7 @@ export const App = () => {
 				value = {name}
 				/>
 				<br/>
-				<input 
+				<input className='inputs'
 				type = 'text'
 				placeholder= 'Email'
 				aria-label='email'
@@ -98,7 +98,7 @@ export const App = () => {
 				value = {email}
 				/>
 				<br/>
-				<input 
+				<input className='inputs'
 				type = 'text'
 				placeholder= 'Tags'
 				aria-label='tags'
@@ -112,7 +112,7 @@ export const App = () => {
 		   </div>
 		   :
 		   <div>
-			<h2>Interesting Articles</h2>
+			<h2 className='header2'>Interesting Articles</h2>
 			<PagesList pages={pages} setPages= {setPages} />
 			<br/>
 			<button className='buttonAdd' onClick = {()=>{setIsAddingArticle(!isAddingArticle)}}>Add Article</button>

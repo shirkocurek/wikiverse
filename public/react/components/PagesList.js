@@ -46,7 +46,7 @@ export const PagesList = ({pages, setPages}) => {
 	return <>
 		{ article ?
 		<div>
-			<div className='info2'>
+			<div>
 			<br/>
 			<h2 className='info1'>Title: {article.title}</h2>
 			<br/>

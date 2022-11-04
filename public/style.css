@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Aleo&family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aleo&family=Questrial&family=Quicksand:wght@300&display=swap');
 
 
 
@@ -8,7 +9,7 @@
   box-sizing: border-box;
   background-color: rgb(223, 223, 223);
   background-color: #F2F7FA;
-  font-family: 'Aleo', serif;
+  font-family: 'Quicksand', sans-serif;
   text-align: center;
 }
 
@@ -20,13 +21,16 @@ main {
 }
 
 .titlestyle {
-  color: rgb(11, 11, 170);
-  font-size: medium;
+  color: rgb(8, 8, 130);
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .titlestyle:hover {
-  background-color: #e6f4fc;
+ /* background-color: #e6f4fc;*/
   color: rgb(8, 8, 28);
+  box-shadow:  0 4px 6px 0 rgba(0,0,0,0.24);
 }
 
 
@@ -34,6 +38,10 @@ main {
     transition-duration: 0.4s;
     font-size: 16px;
     border-radius: 4px;
+    width: 180px;
+    background-color:#F2F7FA;
+    height: 35px;
+    margin-top: 25px;
     
   }
   
@@ -47,6 +55,9 @@ main {
     transition-duration: 0.4s;
     font-size: 16px;
     border-radius: 4px;
+    width: 150px;
+    background-color: #F2F7FA;
+    height: 35px;
   }
   .buttonSubmit:hover {
     background-color: #515455; 
@@ -59,6 +70,9 @@ main {
     transition-duration: 0.4s;
     font-size: 16px;
     border-radius: 4px;
+    background-color:#F2F7FA;
+    width: 150px;
+    height: 35px;
   }
   .buttonBack:hover {
     background-color: #515455; 
@@ -70,6 +84,9 @@ main {
     transition-duration: 0.4s;
     font-size: 16px;
     border-radius: 4px;
+    background-color:#F2F7FA;
+    width: 150px;
+    height: 35px;
   }
   .buttonDelete:hover {
     background-color: #515455; 
@@ -80,12 +97,40 @@ main {
 
  .info1 {
   
-  font-size: 16px;
+ font-size: 15px;
+ margin-top: 10px;
+ margin-bottom: 10px;
+ 
  }
 
- .info2 {
-  text-align: left;
-  font-size: 16px;
- }
 
 
+.inputs {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+}
+
+
+.formdiv {
+
+
+}
+
+.header1 {
+  color:rgb(12, 12, 67);
+  margin-top: 25px;
+  font-size: 80px;
+  
+}
+.header2 {
+  color:rgb(12, 12, 67);
+  margin-top: 15px;
+  margin-bottom: 25px;
+  
+}
