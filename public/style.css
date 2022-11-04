@@ -20,6 +20,72 @@ main {
 }
 
 .titlestyle {
-  color: rgb(56, 91, 207);
+  color: rgb(11, 11, 170);
   font-size: medium;
 }
+
+.titlestyle:hover {
+  background-color: #e6f4fc;
+  color: rgb(8, 8, 28);
+}
+
+
+  .buttonAdd {
+    transition-duration: 0.4s;
+    font-size: 16px;
+    border-radius: 4px;
+    
+  }
+  
+  .buttonAdd:hover {
+    background-color: #515455; 
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+  .buttonSubmit{
+    transition-duration: 0.4s;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+  .buttonSubmit:hover {
+    background-color: #515455; 
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    
+  }
+
+  .buttonBack{
+    transition-duration: 0.4s;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+  .buttonBack:hover {
+    background-color: #515455; 
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    
+  }
+  .buttonDelete{
+    transition-duration: 0.4s;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+  .buttonDelete:hover {
+    background-color: #515455; 
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    
+  }
+
+ .info1 {
+  
+  font-size: 16px;
+ }
+
+ .info2 {
+  text-align: left;
+  font-size: 16px;
+ }
+
+

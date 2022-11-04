@@ -1,17 +1,18 @@
-import React from 'react';
-import { useState } from 'react';
-
+import React from "react";
+import { useState } from "react";
 
 export const Page = (props) => {
-
-
-  return <>
-  
-    <br/>
-    <h3 className='titlestyle' onClick ={()=> {props.page.slug}}>
-    {props.page.title}</h3>
-    
-
-  </>
-} 
-	
+  return (
+    <>
+      <br />
+      <h3
+        className="titlestyle"
+        onClick={() => {
+          props.clickThis(props.page.slug);
+        }}
+      >
+        {props.page.title}
+      </h3>
+    </>
+  );
+};

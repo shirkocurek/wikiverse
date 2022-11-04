@@ -46,13 +46,23 @@ export const PagesList = ({pages, setPages}) => {
 	return <>
 		{ article ?
 		<div>
-			<h2>Title: {article.title}</h2>
-			<h3>Author: {article.author.name}</h3>
-			<h4>Content: {article.content}</h4>
-			<h5>Tags: {article.tags.map((tag) =>{return<div>{tag.name}<br/></div>} )}</h5>
-			<h6>Date: {article.createdAt}</h6>
-			<button onClick={()=>{goBack()}}>Back to Wikilist</button>
-			<button onClick={()=>{deleteArticle(article.slug)}}>Delete</button>
+			<div className='info2'>
+			<br/>
+			<h2 className='info1'>Title: {article.title}</h2>
+			<br/>
+			<h3 className='info1'>Author: {article.author.name}</h3>
+			<br/>
+			<h4 className='info1'>Content: {article.content}</h4>
+			<br/>
+			<h5 className='info1'>Tags: {article.tags.map((tag) =>{return<div>{tag.name}<br/></div>} )}</h5>
+			<br/>
+			<h6 className='info1'>Date: {article.createdAt}</h6>
+			<br/>
+			</div>
+			<button className='buttonBack' onClick={()=>{goBack()}}>Back to Wikilist</button>
+			<br/>
+			<br/>
+			<button className='buttonDelete' onClick={()=>{deleteArticle(article.slug)}}>Delete</button>
         </div>
 		:
 			pages.map((page, idx) => {

@@ -57,11 +57,15 @@ export const App = () => {
 
 	return (
 		<main>	
+		<div>
+			<img scr= 'https://labs.openai.com/e/Bv6mKr9x0gw9HMe4MRkHXz47/original' alt= 'book in space'/>
+		</div>	
       <h1>WikiVerse</h1>
 	       {isAddingArticle ?
 		   <div>
 			<form onSubmit={handleSubmit}>
 				<h3>Add Article</h3>
+				<br/>
 				<input 
 				type = 'text'
 				placeholder= 'Title'
@@ -69,6 +73,7 @@ export const App = () => {
 				onChange={(e) =>setTitle(e.target.value)}
 				value = {title}
 				/>
+				<br/>
 				<input 
 				type = 'text'
 				placeholder= 'Article Content'
@@ -76,6 +81,7 @@ export const App = () => {
 				onChange={(e) =>setContent(e.target.value)}
 				value = {content}
 				/>
+				<br/>
 				<input 
 				type = 'text'
 				placeholder= 'Article Name'
@@ -83,6 +89,7 @@ export const App = () => {
 				onChange={(e) =>setName(e.target.value)}
 				value = {name}
 				/>
+				<br/>
 				<input 
 				type = 'text'
 				placeholder= 'Email'
@@ -90,6 +97,7 @@ export const App = () => {
 				onChange={(e) =>setEmail(e.target.value)}
 				value = {email}
 				/>
+				<br/>
 				<input 
 				type = 'text'
 				placeholder= 'Tags'
@@ -97,8 +105,9 @@ export const App = () => {
 				onChange={(e) =>setTags(e.target.value)}
 				value = {tags}
 				/>
-				
-              <button type= 'submit'>Submit</button>
+				<br/>
+				<br/>
+              <button className = 'buttonSubmit'  type= 'submit'>Submit</button>
 			</form>
 		   </div>
 		   :
@@ -106,7 +115,7 @@ export const App = () => {
 			<h2>Interesting Articles</h2>
 			<PagesList pages={pages} setPages= {setPages} />
 			<br/>
-			<button onClick = {()=>{setIsAddingArticle(!isAddingArticle)}}>Add Article</button>
+			<button className='buttonAdd' onClick = {()=>{setIsAddingArticle(!isAddingArticle)}}>Add Article</button>
 			</div>
 		   }
 		</main>
