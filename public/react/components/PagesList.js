@@ -1,5 +1,7 @@
 import React from 'react';
 import { Page } from './Page';
+import apiURL from '../api';
+import { useState } from 'react';
 
 export const PagesList = ({pages, setPages}) => {
 	const [article, setArticle] = useState('');
@@ -19,7 +21,7 @@ export const PagesList = ({pages, setPages}) => {
 		try {
 			const response = await fetch(`${apiURL}/wiki/`);
 			const allData = await response.json();
-			setPages(pagesData);
+			setPages(allData);
 			setArticle();
 		} catch (err) {
 			console.log("Oh no an error! ", err)

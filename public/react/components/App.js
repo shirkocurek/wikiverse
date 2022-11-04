@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { PagesList } from './PagesList';
+import { Page } from './Page';
 
 // import and prepend the api url to any fetch calls
 import apiURL from '../api';
@@ -8,10 +9,9 @@ import e from 'cors';
 export const App = () => {
 
 	const [pages, setPages] = useState([]);
-	const [article, setArticle] = useState([]);
 	const [isAddingArticle, setIsAddingArticle] = useState(false)
 	const [title,setTitle] = useState('');
-	const [contect,setContent] = useState('');
+	const [content,setContent] = useState('');
 	const [name,setName] = useState('');
 	const [email,setEmail] = useState('');
 	const [tags,setTags] = useState('');
@@ -26,7 +26,23 @@ export const App = () => {
 		}
 	}
 
-    const handleSubmit = async 
+    const handleSubmit = async (e) => {
+		const response = await fetch(`${apiURL}/wiki`, {
+			method : "POST",
+			headers: {
+				'Content-Type' : 'application/json'
+			},
+			body: JSON.stringify({
+				title: title,
+				contect: content,
+				name: name,
+				email: email,
+				tags: tags
+
+			})
+		})
+		{/*const data = await response.json();*/}
+	}
 
 
 
@@ -89,6 +105,7 @@ export const App = () => {
 		   <div>
 			<h2>Interesting Articles</h2>
 			<PagesList pages={pages} setPages= {setPages} />
+			<br/>
 			<button onClick = {()=>{setIsAddingArticle(!isAddingArticle)}}>Add Article</button>
 			</div>
 		   }

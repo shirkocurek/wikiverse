@@ -9,6 +9,7 @@
   background-color: rgb(223, 223, 223);
   background-color: #F2F7FA;
   font-family: 'Aleo', serif;
+  text-align: center;
 }
 
 main {
@@ -19,6 +20,6 @@ main {
 }
 
 .titlestyle {
-  color: blue;
+  color: rgb(56, 91, 207);
   font-size: medium;
 }
