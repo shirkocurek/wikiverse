@@ -4,7 +4,7 @@ import { Page } from './Page';
 
 // import and prepend the api url to any fetch calls
 import apiURL from '../api';
-import e from 'cors';
+
 
 export const App = () => {
 
@@ -14,7 +14,7 @@ export const App = () => {
 	const [content,setContent] = useState('');
 	const [name,setName] = useState('');
 	const [email,setEmail] = useState('');
-	const [tags,setTags] = useState('');
+	const [tags,setTags] = useState();
 
 	async function fetchPages(){
 		try {
@@ -27,6 +27,7 @@ export const App = () => {
 	}
 
     const handleSubmit = async (e) => {
+		console.log('this is handle submit', e)
 		const response = await fetch(`${apiURL}/wiki`, {
 			method : "POST",
 			headers: {
@@ -34,14 +35,14 @@ export const App = () => {
 			},
 			body: JSON.stringify({
 				title: title,
-				contect: content,
+				content: content,
 				name: name,
 				email: email,
 				tags: tags
 
 			})
 		})
-		{/*const data = await response.json();*/}
+		const data = await response.json();
 	}
 
 
@@ -52,13 +53,13 @@ export const App = () => {
 		fetchPages();
 	}, []);
 
-
+	
 
 
 	return (
 		<main>	
 		<div>
-			<img scr= 'https://labs.openai.com/e/Bv6mKr9x0gw9HMe4MRkHXz47/original' alt= 'book in space'/>
+			{/*<img src= '' alt= 'book in space'/>*/}
 		</div>	
       <h1 className='header1'>WikiVerse</h1>
 	       {isAddingArticle ?
