@@ -29,8 +29,10 @@ main {
 
 .titlestyle:hover {
  /* background-color: #e6f4fc;*/
-  color: rgb(8, 8, 28);
-  box-shadow:  0 4px 6px 0 rgba(0,0,0,0.24);
+  color: rgb(19, 19, 226);
+  
+  background-color: #F2F7FA;
+  cursor: pointer; 
 }
 
 
@@ -47,9 +49,11 @@ main {
   }
   
   .buttonAdd:hover {
-    background-color: #515455; 
+    background-color: rgb(20, 20, 25);
+    cursor: pointer; 
     color: white;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
   }
 
   .buttonSubmit{
@@ -61,7 +65,8 @@ main {
     height: 35px;
   }
   .buttonSubmit:hover {
-    background-color: #515455; 
+    background-color: rgb(20, 20, 25);
+    cursor: pointer;  
     color: white;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     
@@ -76,7 +81,8 @@ main {
     height: 35px;
   }
   .buttonBack:hover {
-    background-color: #515455; 
+    background-color: rgb(20, 20, 25);
+    cursor: pointer; 
     color: white;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     
@@ -90,7 +96,8 @@ main {
     height: 35px;
   }
   .buttonDelete:hover {
-    background-color: #515455; 
+    background-color: rgb(20, 20, 25);
+    cursor: pointer;  
     color: white;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     
@@ -104,6 +111,15 @@ main {
  color: rgb(4, 4, 62);
  
  }
+ .info2 {
+
+  text-decoration-line: underline;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: rgb(4, 4, 62);
+  
+  }
 
 
 
@@ -134,5 +150,61 @@ main {
   color:rgb(12, 12, 67);
   margin-top: 15px;
   margin-bottom: 25px;
+  text-decoration-line: underline;
   
+}
+
+.footer{
+
+  margin-top: 3rem;
+  padding: 1rem; 
+  background-color: #F2F7FA;
+  position: absolute fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.facebook {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/739/739237.png');
+  height: 20px;
+  width: 20px;
+  margin-top: 25px;
+  background-size: 100%;
+  border:none;
+  margin-right: 1em;
+}
+
+.instagram {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/1077/1077042.png');
+  height: 20px;
+  width: 20px;
+  margin-top: 25px;
+  background-size: 100%;
+  border:none;
+  margin-right: 1em;
+}
+
+.twitter {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/733/733635.png');
+  height: 20px;
+  width: 20px;
+  margin-top: 25px;
+  background-size: 100%;
+  border:none;
+  margin-right: 1em;
+}
+
+.pinterest {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/2175/2175205.png');
+  height: 20px;
+  width: 20px;
+  margin-top: 25px;
+  background-size: 100%;
+  border:none;
+  margin-right: 1em;
+}
+
+.footerTag{
+  margin-top: 1em;
 }

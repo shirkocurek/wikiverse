@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { PagesList } from './PagesList';
 import { Page } from './Page';
+import { Footer } from "./Footer";
 
 // import and prepend the api url to any fetch calls
 import apiURL from '../api';
@@ -9,6 +10,7 @@ import apiURL from '../api';
 export const App = () => {
 
 	const [pages, setPages] = useState([]);
+	const [article, setArticle] = useState('');
 	const [isAddingArticle, setIsAddingArticle] = useState(false)
 	const [title,setTitle] = useState('');
 	const [content,setContent] = useState('');
@@ -43,6 +45,18 @@ export const App = () => {
 			})
 		})
 		const data = await response.json();
+	}
+
+	const goBack = async() => {
+		try {
+			const response = await fetch(`${apiURL}/wiki/`);
+			const allData = await response.json();
+			setPages(allData);
+			setIsAddingArticle();
+		} catch (err) {
+			console.log("Oh no an error! ", err)
+		}
+
 	}
 
 
@@ -110,6 +124,8 @@ export const App = () => {
 				<br/>
               <button className = 'buttonSubmit'  type= 'submit'>Submit</button>
 			</form>
+			<br/>
+			<button className='buttonBack' onClick={()=>{goBack()}}>Back to Wikilist</button>
 		   </div>
 		   :
 		   <div>
@@ -117,8 +133,10 @@ export const App = () => {
 			<PagesList pages={pages} setPages= {setPages} />
 			<br/>
 			<button className='buttonAdd' onClick = {()=>{setIsAddingArticle(!isAddingArticle)}}>Add Article</button>
+			<Footer/>
 			</div>
 		   }
 		</main>
+
 	)
 }

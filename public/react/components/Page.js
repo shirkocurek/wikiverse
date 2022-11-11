@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Footer } from "./Footer";
 
 export const Page = (props) => {
   return (
